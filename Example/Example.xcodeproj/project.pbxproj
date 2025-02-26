@@ -14,7 +14,8 @@
 		817568052CA2C2B500B24577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817568042CA2C2B500B24577 /* Assets.xcassets */; };
 		817568082CA2C2B500B24577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 817568062CA2C2B500B24577 /* LaunchScreen.storyboard */; };
 		81DDFFB62D6EC51A00B95DA1 /* WWImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 81DDFFB52D6EC51A00B95DA1 /* WWImageView */; };
-		81DDFFB92D6EC9E300B95DA1 /* WWImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 81DDFFB82D6EC9E300B95DA1 /* WWImageView */; };
+		81DDFFBC2D6ECB9500B95DA1 /* WWImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 81DDFFBB2D6ECB9500B95DA1 /* WWImageView */; };
+		81DDFFBF2D6ECC9300B95DA1 /* WWImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 81DDFFBE2D6ECC9300B95DA1 /* WWImageView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +34,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DDFFB62D6EC51A00B95DA1 /* WWImageView in Frameworks */,
-				81DDFFB92D6EC9E300B95DA1 /* WWImageView in Frameworks */,
+				81DDFFBC2D6ECB9500B95DA1 /* WWImageView in Frameworks */,
 				810FF2092D6EBDCD00C6BB13 /* WWImageView in Frameworks */,
+				81DDFFBF2D6ECC9300B95DA1 /* WWImageView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +123,8 @@
 			packageProductDependencies = (
 				810FF2082D6EBDCD00C6BB13 /* WWImageView */,
 				81DDFFB52D6EC51A00B95DA1 /* WWImageView */,
-				81DDFFB82D6EC9E300B95DA1 /* WWImageView */,
+				81DDFFBB2D6ECB9500B95DA1 /* WWImageView */,
+				81DDFFBE2D6ECC9300B95DA1 /* WWImageView */,
 			);
 			productName = Example;
 			productReference = 817567F82CA2C2B400B24577 /* Example.app */;
@@ -152,7 +155,7 @@
 			);
 			mainGroup = 817567EF2CA2C2B400B24577;
 			packageReferences = (
-				81DDFFB72D6EC9E300B95DA1 /* XCRemoteSwiftPackageReference "WWImageView" */,
+				81DDFFBD2D6ECC9300B95DA1 /* XCRemoteSwiftPackageReference "WWImageView" */,
 			);
 			productRefGroup = 817567F92CA2C2B400B24577 /* Products */;
 			projectDirPath = "";
@@ -417,12 +420,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		81DDFFB72D6EC9E300B95DA1 /* XCRemoteSwiftPackageReference "WWImageView" */ = {
+		81DDFFBD2D6ECC9300B95DA1 /* XCRemoteSwiftPackageReference "WWImageView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWImageView";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -436,9 +439,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWImageView;
 		};
-		81DDFFB82D6EC9E300B95DA1 /* WWImageView */ = {
+		81DDFFBB2D6ECB9500B95DA1 /* WWImageView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81DDFFB72D6EC9E300B95DA1 /* XCRemoteSwiftPackageReference "WWImageView" */;
+			productName = WWImageView;
+		};
+		81DDFFBE2D6ECC9300B95DA1 /* WWImageView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81DDFFBD2D6ECC9300B95DA1 /* XCRemoteSwiftPackageReference "WWImageView" */;
 			productName = WWImageView;
 		};
 /* End XCSwiftPackageProductDependency section */

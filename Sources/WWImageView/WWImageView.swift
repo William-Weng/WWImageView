@@ -12,8 +12,13 @@ open class WWImageView: UIImageView {
     
     public weak var delegate: WWImageViewDelegate?
     
+    private var originalImage: UIImage?
+    
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        
+        defer { image = originalImage }
+        originalImage = image
         delegate?.touched(imageView: self, colorResult: self._color(with: touches))
     }
     
@@ -29,6 +34,10 @@ public extension WWImageView {
     /// - Parameter point: CGPoint
     /// - Returns: Result<UIColor, Error>
     func color(with point: CGPoint) -> Result<UIColor, Error> {
+        
+        defer { image = originalImage }
+        originalImage = image
+        
         return _color(point: point)
     }
 }
