@@ -17,9 +17,13 @@ open class WWImageView: UIImageView {
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        defer { image = originalImage }
-        originalImage = image
-        delegate?.touched(imageView: self, colorResult: self._color(with: touches))
+        if let delegate = delegate {
+            
+            defer { image = originalImage }
+            originalImage = image
+            
+            delegate.touched(imageView: self, colorResult: self._color(with: touches))
+        }
     }
     
     deinit {
