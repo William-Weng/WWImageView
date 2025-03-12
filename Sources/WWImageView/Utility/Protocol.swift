@@ -14,5 +14,7 @@ public protocol WWImageViewDelegate: AnyObject {
     /// - Parameters:
     ///   - imageView: WWImageView
     ///   - colorResult: Result<UIColor, Error>
-    func touched(imageView: WWImageView, colorResult: Result<UIColor, Error>)
+    ///   - touches: Set<UITouch>
+    ///   - event: UIEvent?
+    func touched(imageView: WWImageView, colorResult: Result<UIColor, Error>, touches: Set<UITouch>, event: UIEvent?)
 }

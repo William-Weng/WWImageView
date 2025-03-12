@@ -16,14 +16,7 @@ open class WWImageView: UIImageView {
     
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        
-        if let delegate = delegate {
-            
-            defer { image = originalImage }
-            originalImage = image
-            
-            delegate.touched(imageView: self, colorResult: self._color(with: touches))
-        }
+        touchesBeganAction(touches, with: event)
     }
     
     deinit {
@@ -43,5 +36,24 @@ public extension WWImageView {
         originalImage = image
         
         return _color(point: point)
+    }
+}
+
+// MARK: - 小工具
+private extension WWImageView {
+    
+    /// 點下去的處理
+    /// - Parameters:
+    ///   - touches: Set<UITouch>
+    ///   - event: UIEvent?
+    func touchesBeganAction(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if let delegate = delegate {
+            
+            defer { image = originalImage }
+            originalImage = image
+            
+            delegate.touched(imageView: self, colorResult: self._color(with: touches), touches: touches, event: event)
+        }
     }
 }

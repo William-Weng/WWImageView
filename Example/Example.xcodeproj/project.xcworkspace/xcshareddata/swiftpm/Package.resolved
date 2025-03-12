@@ -1,14 +1,15 @@
 {
+  "originHash" : "def3c447b64af8f5dfb91e964f19bc3d1af1431340d55dbde893d012f45d9046",
   "pins" : [
     {
       "identity" : "wwimageview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWImageView",
       "state" : {
-        "revision" : "b6365488148f8ee36894fa1db1921943e11040c9",
-        "version" : "1.0.1"
+        "revision" : "d0f863da4d693ba06c6ecb24657bc2ae8c9e1bd7",
+        "version" : "1.0.2"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
