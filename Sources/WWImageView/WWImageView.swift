@@ -31,10 +31,6 @@ public extension WWImageView {
     /// - Parameter point: CGPoint
     /// - Returns: Result<UIColor, Error>
     func color(with point: CGPoint) -> Result<UIColor, Error> {
-        
-        defer { image = originalImage }
-        originalImage = image
-        
         return _color(point: point)
     }
 }
@@ -47,13 +43,6 @@ private extension WWImageView {
     ///   - touches: Set<UITouch>
     ///   - event: UIEvent?
     func touchesBeganAction(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        if let delegate = delegate {
-            
-            defer { image = originalImage }
-            originalImage = image
-            
-            delegate.touched(imageView: self, colorResult: self._color(with: touches), touches: touches, event: event)
-        }
+        delegate?.touched(imageView: self, colorResult: self._color(with: touches), touches: touches, event: event)
     }
 }
