@@ -24,7 +24,7 @@ final class ViewController: UIViewController {
 // MARK: - WWImageViewDelegate
 extension ViewController: WWImageViewDelegate {
     
-    func touched(imageView: WWImageView, colorResult: Result<UIColor, Error>, touches: Set<UITouch>, event: UIEvent?)
+    func touched(imageView: WWImageView, colorResult: Result<UIColor, Error>, touches: Set<UITouch>, event: UIEvent?) {
 
         switch colorResult {
         case .failure(let error): print(error)

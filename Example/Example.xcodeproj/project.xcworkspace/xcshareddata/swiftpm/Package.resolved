@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWImageView",
       "state" : {
-        "revision" : "d0f863da4d693ba06c6ecb24657bc2ae8c9e1bd7",
-        "version" : "1.0.2"
+        "revision" : "b02f59ecd40747669fe1417d3ffdbd31d4cd4792",
+        "version" : "1.0.3"
       }
     }
   ],
